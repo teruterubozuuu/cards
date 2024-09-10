@@ -7,10 +7,12 @@
 
 
 body{
-  background-color: #0b0c11;
+  /*background-color: #0b0c11;*/
+  background-image: url("./images/nevermore_bg.jpg");
   font-family: "Lora", serif;
    color:rgb(221, 226, 253);
    overflow-x:hidden;
+   
 }
 
 
@@ -50,12 +52,13 @@ body{
   }
 
 .card{
-  background-color: #11121b;
-  text-align: center;
+    /*background-color: #11121b;*/
+    background-color: #080814d0;
+    text-align: center;
     padding:20px 25px;
     border-radius: 5px;
-    color:rgb(255, 255, 255);
-    box-shadow: 10px 10px 5px 0px #09090e;
+    color:rgba(255, 255, 255, 0.938);
+    box-shadow: 8px 8px 4px 0px #0a0a13;
     font-family: "Lora", serif;
     font-size: 15px;
     max-width: 250px;
@@ -65,7 +68,7 @@ body{
 }
 
 .card:hover{
-    transform: scale(1.1);
+    transform: scale(1);
 }
 
 
@@ -83,36 +86,25 @@ body{
     to { opacity: 100}
   }
 
-
-  /* Screen larger than 600px? 2 column */
-@media (max-width: 600px) {
-    .wrapper {
-         grid-template-columns: repeat(3, 1fr); 
+      /* Screen larger than 900px? 3 columns */
+      @media screen and (max-width: 951px) {
+        .wrapper { 
+            grid-template-columns: repeat(2, 1fr);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+           -webkit-transform: translate(-50%, -50%);
+           transform: translate(-50%, -50%); 
         }
-
-    .main{
-        position: absolute;
-        left: 50%;
-        top: 70%;
-       -webkit-transform: translate(-50%, -50%);
-       transform: translate(-50%, -50%);
-    }
-  }
   
-  /* Screen larger than 900px? 3 columns */
-  @media (max-width: 950px) {
-    .wrapper { 
-        grid-template-columns: repeat(4, 1fr);
-        position: absolute;
-        left: 50%;
-        top: 50%;
-       -webkit-transform: translate(-50%, -50%);
-       transform: translate(-50%, -50%); 
-    }
-  }
+        .main{
+          margin-top:50%;
+        }
+      }
+
 
     /* Screen larger than 900px? 3 columns */
-    @media (min-width: 951px) {
+    @media screen and (min-width: 951px) {
       .wrapper { 
           grid-template-columns: repeat(4, 1fr);
           position: absolute;
@@ -126,10 +118,15 @@ body{
         margin-top:2%;
       }
     }
+
+    @media screen and (max-width:1920px){
+      body{
+        background-size:1920px;
+      }
+    }
   
 
- /*modal*/
- .modal, .overlay {
+.bg-overlay{
   width: 100vw;
   height: 100vh;
   top: 0;
@@ -138,26 +135,5 @@ body{
   bottom: 0;
   position: fixed;
   z-index: index 2;
-
-}
-
-
-.modal-content{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  line-height: 2;
-  background:#45159f;
-  box-shadow: 10px 8px #150730;
-  color:white;
-  padding: 35px 45px;
-  border-radius: 3px;
-  max-width: 600px;
-  min-width: 300px;
-}
-
-.modal-content h2{
-  margin:45px 0 0 0;
-  text-align: center;
+  background-color: #0d0d227c;
 }

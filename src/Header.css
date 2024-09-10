@@ -20,7 +20,8 @@
   .title{
     text-align: center;
       font-size:40px;
-      color:white;
+      color:rgba(255, 255, 255, 0.911);
+      text-shadow: 2px 3px  #080814d0;
   
   }
   

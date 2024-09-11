@@ -12,6 +12,10 @@ body{
   font-family: "Lora", serif;
    color:rgb(221, 226, 253);
    overflow-x:hidden;
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: cover;
    
 }
 
@@ -24,19 +28,21 @@ body{
     top: 50%;
    -webkit-transform: translate(-50%, -50%);
    transform: translate(-50%, -50%);
-   animation:fade-in 2.5s;
+   animation:fade-right 2s ease;
 }
 
 .wrapper{
   margin-bottom:-100%;
   display: grid;
   grid-gap: 1rem;
+  
 }
+
 
 @keyframes fade-in {
     from {
         opacity: 0;
-        transform: translateY(-100%);
+
     }
     to { opacity: 100 }
   }
@@ -119,11 +125,19 @@ body{
       }
     }
 
-    @media screen and (max-width:1920px){
-      body{
-        background-size:1920px;
-      }
+    @media screen and (min-width:2500px){
+      .card{
+        transform:scale(1.5);
     }
+
+      .wrapper{
+        grid-gap: 15rem 13rem;
+      }
+    
+    }
+
+
+  
   
 
 .bg-overlay{

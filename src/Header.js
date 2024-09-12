@@ -1,9 +1,9 @@
 import "./Header.css"
-function Header(){
+function Header(props){
     return(
         <div className="header">
-        <img src="./nevermore.png" className="logo"></img>
-        <h1 className="title">Nevermore Academy: The Nightshades</h1>
+        <img src={props.nevermoreSym} alt={props.alt} className="logo"></img>
+        <h1 className="title">{props.school}</h1>
         </div>
     );
 }

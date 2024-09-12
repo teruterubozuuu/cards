@@ -7,12 +7,18 @@ import Header from './Header';
 
 function App() {
   return (
-    <div className="App">
+    <>
       <div className="bg-overlay"></div>
       <Header></Header>
-      <UserProfile></UserProfile>
-  
-    </div>
+      <UserProfile 
+      wImage="./images/wednesday.jpg"
+      wName="Wednesday Addams"
+      wAge="16 years old"
+      wSpecie="Psychic"
+      ></UserProfile>
+      
+
+    </>
   );
 }
 

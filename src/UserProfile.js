@@ -10,9 +10,9 @@ function UserProfile(props){
         <div className="wrapper"> 
             <div className="card">
                 <img src={require("./images/wednesday.jpg")} alt="Wednesday Addams" className="img" />
-                <h2>Wednesday Addams</h2>
-                <p>Age: 16 years old</p>
-                <p>Species: Psychic</p>
+                <h2>{props.wName}</h2>
+                <p>{props.wAge}</p>
+                <p>{props.wSpecie}</p>
             </div>
 
             <div className="card">
